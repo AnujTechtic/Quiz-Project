@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="card text-center">
+  <div class="card-header">
+      <h3>Welcome to Quiz Application</h3>
+      <p class="card-text">You are Here for?</p>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body kuch">
+            <h5 class="card-title"><a href="{% url 'viewQuizStudent' %}"><img src="{% static 'images/page.png' %}" width="30" height="30" class="d-inline-block align-top"></a> Attend</h5>
+              <!-- <img src="{% static 'images/page.png' %}" width="30" height="30" class="d-inline-block align-top"> -->
+            <p class="card-text" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">The real competition is not against other contestants; it is against yourself, to surpass your own limits.</p>
+            <a href="{% url 'viewQuizStudent' %}" class="btn btn-dark">To Attend a Quiz</a>
+        </div>
+      </div>
+      </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body kuch">
+          <h5 class="card-title"><a href="{% url 'viewQuiz' %}"><img src="{% static 'images/page.png' %}" width="30" height="30" class="d-inline-block align-top"></a> Create</h5>
+          <p class="card-text"  style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">A quiz competition is not just about knowledge; it's about the thirst for knowledge.</p>
+          <a href="{% url 'login-page' %}" class="btn btn-dark ">To Create a Quiz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

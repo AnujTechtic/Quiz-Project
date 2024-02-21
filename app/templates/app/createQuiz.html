@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">
+  <!-- Content here -->
+  <div class="d-inline-flex p-2">
+    <h1>Quiz Detail</h1>
+  </div>
+  <form action="" method="post" >
+    {% csrf_token %}
+    <div class="d-inline-flex p-2">
+      <label for="formInput#text">{{form.subject.label}} </label> 
+    </div>
+      {{form.subject}}
+      <div class="d-inline-flex p-2">
+      <label for="formInput#text">{{form.date.label}} </label> 
+    </div>
+      {{form.date}}
+    <div class="d-inline-flex p-2">
+      <label for="">{{form.total_marks.label}} </label> 
+    </div>                     
+      {{form.total_marks}} <br>
+      <div class="d-inline-flex p-2">
+        <input type="submit" value="Submit" class="btn btn-dark">
+      </div>
+  </form>
+</div>
+
+
+{% endblock %}

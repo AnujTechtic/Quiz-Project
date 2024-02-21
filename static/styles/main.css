@@ -1,0 +1,32 @@
+/* body{
+  margin-left: 10px;
+  margin-right: 10px;
+} */
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    width: auto;
+    border-collapse: collapse;
+  }
+th, td {
+    padding: 15px;
+    text-align: justify;
+  }
+tr{
+    border: 1px solid black;
+}
+/* #addQuestion {
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+
+.row{
+  --bs-gutter-x: 0rem;
+}
+
+.d-flex container{
+  width: auto;
+}

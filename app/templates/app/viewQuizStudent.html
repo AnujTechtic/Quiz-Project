@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<h1 align="center">Welcome</h1>
+<h2 align = "center">Select the Quiz</h2>
+    <table>
+        <tr>
+            
+            <th align="center" >Subject </th>
+            <th align="center" >Date </th>
+            <th align="center" >Total Marks </th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+            {% for quiz in quizs %}
+        <tr>
+            
+            <td align="center">{{quiz.subject}}</td>
+            <td align="right">{{quiz.date}}</td>
+            <td align="center">{{quiz.total_marks}}</td>
+            <td><a href=" " class="btn btn-dark">Attend</a></td>
+        </tr>
+        {% endfor %} 
+    </table>
+{% endblock %}

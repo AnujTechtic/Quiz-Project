@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1>Add Question</h1>
+<form action="" method="post">
+  {% csrf_token %}
+  <div class='form-group'>
+    <div class="form-control">
+      {{form.question_text.label}}
+      {{form.question_text}}
+    </div>
+    <div class="form-control">
+      {{form.option_1.label}}
+      {{form.option_1}}
+    </div>
+    <div class="form-control">
+      {{form.option_2.label}}
+      {{form.option_2}}
+    </div>
+    <div class="form-control">
+      {{form.option_3.label}}
+      {{form.option_3}}
+    </div>
+    <div class="form-control">
+      {{form.option_4.label}}
+      {{form.option_4}}
+    </div>
+    <div class="form-control">
+      {{form.correct_option.label}}
+      {{form.correct_option}}
+    </div>
+    <div class="form-control">
+      {{form.quiz.label}}
+      {{form.quiz}}
+    </div>
+    
+    <input type="submit" value="Submit" class="btn btn-dark">
+  </div>
+
+</form>
+{% endblock %}
